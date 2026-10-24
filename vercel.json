@@ -2,21 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/server.js",
+      "src": "package.json",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/server.js"
+      "dest": "src/index.ts"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "CACHE_TYPE": "memory",
-    "STREMIO_ADDON": "true",
-    "CORS_ORIGIN": "*",
-    "MCP_ENABLED": "true"
-  }
+  ]
 }
